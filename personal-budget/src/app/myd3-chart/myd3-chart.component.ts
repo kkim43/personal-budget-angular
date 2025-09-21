@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import * as d3 from 'd3';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'pb-myd3-chart',
@@ -7,16 +8,12 @@ import * as d3 from 'd3';
   styleUrls: ['./myd3-chart.component.scss']
 })
 export class Myd3ChartComponent implements AfterViewInit {
-
-  private data = [
-    { title: 'Rent', budget: 500 },
-    { title: 'Grocery', budget: 200 },
-    { title: 'Utilities', budget: 150 },
-    { title: 'Entertainment', budget: 100 }
-  ];
+  constructor(private dataService: DataService) {}
 
   ngAfterViewInit(): void {
-    this.createChart2(this.data);
+    this.dataService.getBudgetData().subscribe((budget) => {
+      this.createChart2(budget);
+    });
   }
 
   private createChart2(myBudget: any[]): void {
