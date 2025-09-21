@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Myd3ChartComponent } from './myd3-chart.component';
 
 describe('Myd3ChartComponent', () => {

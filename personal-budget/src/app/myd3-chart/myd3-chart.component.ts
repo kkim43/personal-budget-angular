@@ -17,6 +17,7 @@ export class Myd3ChartComponent implements AfterViewInit {
   }
 
   private createChart2(myBudget: any[]): void {
+    
     const width = 400;
     const height = 400;
     const radius = Math.min(width, height) / 2;
