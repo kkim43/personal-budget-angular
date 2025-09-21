@@ -1,4 +1,5 @@
-# Name: Kiyoung Kim (kkim43@charlotte.edu)
+# Assignment 05
+Submitter: Kiyoung Kim (kkim43@charlotte.edu)
 
 # Info
 
